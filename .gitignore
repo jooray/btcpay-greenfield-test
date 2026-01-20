@@ -1,0 +1,20 @@
+# Project-specific files
+CLAUDE.md
+.claude/
+composer.lock
+store_config.json
+webhook_log.txt
+
+# Vendor dependencies
+vendor/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
