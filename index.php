@@ -51,16 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product'])) {
         header("Location: " . $invoice->getCheckoutLink());
         exit;
     } catch (\Throwable $e) {
-        // Library bug: throws on HTTP 201 (Created) which is actually success
-        if (str_contains($e->getMessage(), '(201)')) {
-            if (preg_match('/\{.*\}/s', $e->getMessage(), $matches)) {
-                $data = json_decode($matches[0], true);
-                if (isset($data['checkoutLink'])) {
-                    header("Location: " . $data['checkoutLink']);
-                    exit;
-                }
-            }
-        }
         echo "Error creating invoice: " . $e->getMessage();
     }
 }

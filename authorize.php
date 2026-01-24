@@ -97,18 +97,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $serverWebhookSecret = $webhook->getSecret();
             $webhookSuccess = true;
         } catch (\Throwable $e) {
-            if (str_contains($e->getMessage(), '(201)')) {
-                // Server returned 201 with webhook data in error message
-                // Extract JSON from error message to get the secret
-                if (preg_match('/\{.*\}/s', $e->getMessage(), $matches)) {
-                    $webhookData = json_decode($matches[0], true);
-                    $serverWebhookSecret = $webhookData['secret'] ?? null;
-                }
-                $webhookSuccess = true;
-            } else {
-                echo "Error registering webhook: " . $e->getMessage();
-                exit;
-            }
+            echo "Error registering webhook: " . $e->getMessage();
+            exit;
         }
 
         // Save config with the server-returned webhook secret
