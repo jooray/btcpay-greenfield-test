@@ -1,5 +1,6 @@
 # Project-specific files
 CLAUDE.md
+AGENTS.md
 .claude/
 composer.lock
 store_config.json
