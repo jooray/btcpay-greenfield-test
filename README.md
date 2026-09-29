@@ -2,6 +2,21 @@
 
 A minimal PHP application for testing BTCPay Server's Greenfield API integration.
 
+<!-- jooray-links:start -->
+### More from me
+
+**Related projects**
+
+- [cashupayserver](https://github.com/jooray/cashupayserver): BTCPay-compatible Lightning payments through Cashu, on ordinary PHP hosting
+- [cashu-wallet-php](https://github.com/jooray/cashu-wallet-php): a Cashu wallet library in PHP
+- [mint-discovery](https://github.com/jooray/mint-discovery): Cashu mint discovery library
+- [donation-sink](https://github.com/jooray/donation-sink): accept donations as Cashu tokens
+
+**Full project showcase:** Part of [CashuPayServer](https://juraj.bednar.io/showcase/#PAY-01) in my project showcase, or [all my projects](https://juraj.bednar.io/showcase/).
+
+I write about building things on [my blog](https://juraj.bednar.io/en/blog-en/). I also wrote a cypherpunk novel, [Tamers of Entropy](https://tamersofentropy.net/), and there is a [trailer](https://tamersofentropy.net/#trailer).
+<!-- jooray-links:end -->
+
 ## Features
 
 - OAuth authorization flow with BTCPay Server
